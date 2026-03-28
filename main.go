@@ -13,9 +13,9 @@ const TEST_RP2040_PORT = "/dev/serial/by-id/usb-MicroPython_Board_in_FS_mode_505
 const MOTOR_RP2040_PORT = "/dev/serial/by-id/usb-MicroPython_Board_in_FS_mode_e6632c25a31d362d-if00"
 
 func main() {
-	motorREPL, err := repl.New(MOTOR_RP2040_PORT, repl.DefaultBaud, repl.DefaultTimeout, false)
+	motorREPL, err := repl.New(TEST_RP2040_PORT, repl.DefaultBaud, repl.DefaultTimeout, false)
 	if err != nil {
-		fmt.Printf("Failed to connect to motor RP2040 on %s: %v\n", MOTOR_RP2040_PORT, err)
+		fmt.Printf("Failed to connect to motor RP2040 on %s: %v\n", TEST_RP2040_PORT, err)
 		return
 	}
 	defer motorREPL.Close()
