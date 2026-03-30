@@ -1,0 +1,17 @@
+[Unit]
+Description=Joystick Controller
+
+[Service]
+Type=simple
+User=redstone
+Group=redstone
+SupplementaryGroups=input dialout
+WorkingDirectory=/home/redstone/joystick-controller
+ExecStart=/home/redstone/joystick-controller/joystick-controller
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
