@@ -73,8 +73,8 @@ func main() {
 			throttle := -yPct
 			steering := xPct
 
-			left := clamp(throttle+steering, -100, 100)
-			right := clamp(throttle-steering, -100, 100)
+			left := clamp(throttle+steering, -100, 100) * 5
+			right := clamp(throttle-steering, -100, 100) * 5
 
 			m1, m2, m3, m4 := left, right, left, right
 			if !haveLastSpeeds || m1 != lastM1 || m2 != lastM2 || m3 != lastM3 || m4 != lastM4 {
