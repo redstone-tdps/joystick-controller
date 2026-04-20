@@ -165,7 +165,7 @@ func findController() (*evdev.InputDevice, []string, error) {
 	names := make([]string, 0, len(devices))
 	for _, dev := range devices {
 		names = append(names, dev.Name)
-		if dev.Name == "Xbox Wireless Controller" || dev.Name == "Zikway HID gamepad" || dev.Name == "2.4G XBOX 360 For Windows Keyboard" {
+		if dev.Name == "Xbox Wireless Controller" || dev.Name == "Zikway HID gamepad" {
 			return dev, names, nil
 		}
 	}
